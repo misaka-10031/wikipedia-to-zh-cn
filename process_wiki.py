@@ -24,6 +24,6 @@ if __name__ == '__main__':
         output.write(" ".join(text) + "\n")
         i = i + 1
         if (i % 10000 == 0):
-            logging.info("Save "+str(i) + " articles")
+            logging.info("已完成 "+str(i) + " 条数据")
     output.close()
-    logging.info("Finished saved "+str(i) + "articles")
+    logging.info("全部完成，共生成了 "+str(i) +" 条数据")
