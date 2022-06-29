@@ -8,7 +8,7 @@ logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', level=logg
     @chenbingjin 2016-05-11
 '''
 def help():
-    print ("Usage: python process_wiki.py zhwiki-latest-pages-articles.xml.bz2 wiki.zh.txt")
+    print ("传入参数不足，请使用python process_wiki.py zhwiki-latest-pages-articles.xml.bz2 wiki.zh.txt传入待处理的文件和保存的文件名")
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:
