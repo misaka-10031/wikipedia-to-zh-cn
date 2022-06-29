@@ -14,8 +14,9 @@ def cutIt(inputFileName,outputFileName):
             output.write(sentence)
             if count == 10000:
                 i += 1
-                print('第',str(i),'次')
+                print('已完成',str(i),'条')
                 count = 0
             line = source.readline()
+        print('全部完成，共处理了',str(count),'条')
 
 cutIt('zhswiki.txt','zhswiki_cut.txt')
