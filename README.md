@@ -4,7 +4,11 @@
 
 下载-导出-简繁体转换-分词（可选）  
 需要安装的依赖：  
-> pip install gensim,jieba  
+
+```bash
+pip install gensim,jieba  
+# 无论是执行脚本还是手动完成，都必须安装这两个依赖库
+```
 
 ### 下载
 
