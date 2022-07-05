@@ -16,7 +16,7 @@
 
 > 请确认你已经完整clone了本项目<https://github.com/misaka-10031/wikipedia-to-zh-cn>  
 > 按照规范将下载的Wiki原始数据包移动到此git目录中  
-> 完成OpenCC软件的下载与环境变量PATH设置(详见下文“简繁体转换”章节)  
+> 完成OpenCC软件的下载与环境变量PATH设置(详见[简繁体转换](https://github.com/misaka-10031/wikipedia-to-zh-cn#%E7%AE%80%E7%B9%81%E4%BD%93%E8%BD%AC%E6%8D%A2)章节)  
 > 并确保你的磁盘有足够的剩余空间（大约是xml.bz2文件的2-3倍大小）来存储中间过程和结果  
 
 ```bash
@@ -29,19 +29,28 @@ bash.bat
 
 使用维基百科提供的工具 gensim，开始导出  
 
-> python process_wiki.py zhwiki-latest-pages-articles.xml.bz2 zhwikiraw.txt  
+```bash
+python process_wiki.py zhwiki-latest-pages-articles.xml.bz2 zhwikiraw.txt  
+```
 
 ### 简繁体转换
 
 下载并解压[OpenCC](https://github.com/BYVoid/OpenCC)到任意位置  
-将 'OpenCC/build/bin' 添加到环境变量PATH  
+将 `OpenCC/build/bin` 添加到环境变量PATH  
 cmd执行指令：  
-> opencc -i zhwikiraw.txt -o zhswiki.txt -c t2s.json  
+
+```bash
+opencc -i zhwikiraw.txt -o zhswiki.txt -c t2s.json  
+```
 
 ### 分词
 
 (请确保上一步输出文件名为zhswiki.txt)  
-> fenci.py zhswiki.txt zhswiki_cut.txt  
+
+```bash
+fenci.py zhswiki.txt zhswiki_cut.txt  
+```
+
 输出的zhswiki_cut.txt，就是最终结果啦  
 
 ## 感谢
