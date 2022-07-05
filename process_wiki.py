@@ -17,9 +17,9 @@ if __name__ == '__main__':
     logging.info("running %s" % ' '.join(sys.argv))
     inp, outp = sys.argv[1:3]
     i = 0
-
     output = open(outp, 'w',encoding='utf-8')
     wiki = WikiCorpus(inp, dictionary={})
+    logging.info('开始处理，视电脑性能可能需要30分钟到几小时...')
     for text in wiki.get_texts():
         output.write(" ".join(text) + "\n")
         i = i + 1
