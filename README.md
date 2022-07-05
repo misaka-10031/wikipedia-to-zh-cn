@@ -49,6 +49,7 @@ cmd执行指令：
 [chenbjin](https://github.com/chenbjin) process_wiki.py的原始撰写者，优秀的机器学习工程师  
 Wikipedia 维基百科  
 [OpenCC](https://github.com/BYVoid/OpenCC) 一款开源的简繁体转换工具  
+(本目录下`*.ocd2` `t2s.json`文件，均为OpenCC目录中的文件。)
 
 ## TODO
 
