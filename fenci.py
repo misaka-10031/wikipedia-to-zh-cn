@@ -1,4 +1,5 @@
 import jieba
+import sys
 from matplotlib import lines
 from sympy import finite_diff_weights
 from tqdm import tqdm
@@ -26,4 +27,12 @@ def cutIt(inputFileName,outputFileName):
                 pbar.update(1)
         print('全部完成，共处理了',str(count),'条')
 
-cutIt('zhswiki.txt','zhswiki_cut.txt')
+def help():
+    print ("传入参数不足，请使用python fenci.py zhswiki.txt zhswiki_cut.txt 传入待处理的文件和保存的文件名")
+
+if __name__ == '__main__':
+    if len(sys.argv) < 3:
+        help()
+        sys.exit(1)
+    input, output = sys.argv[1:3]
+    cutIt(input,output)
